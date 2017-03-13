@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var mountianSchema = new mongoose.Schema({
+var mountainSchema = new mongoose.Schema({
 	name: String,
 	state: String,
 	trails: {
@@ -10,11 +10,11 @@ var mountianSchema = new mongoose.Schema({
 	},
 	conditions: String,
 	nightlife: {
-		bars:{[name: String, type: String, address: String]},
-		restaurants: {[name: String, type: String, address: String]}
+		bars:{name: String, type: String, address: String},
+		restaurants: {name: String, type: String, address: String}
 	},
 })
 
-var mountianModel = mongoose.model('Mountain', mountianSchema);
+var mountainModel = mongoose.model('Mountain', mountainSchema);
 
-module.exports = mountianModel;
+module.exports = mountainModel;

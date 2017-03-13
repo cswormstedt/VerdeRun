@@ -1,0 +1,19 @@
+[{
+"name": "Vail",
+"state": "Colorado",
+"trails": { "number": 193, "open": 193, "closed": 0
+},
+"conditions": "sunny",
+"nightlife": {
+"bars":{"name": "The Remedy bar", "type": "lounge", "address": "1 Vail Road, Vail, Co",
+        "place": "Garfinkel", "type": "sports bar", "address": "536 E. Lionshead Circle, Vail, Co",
+        "name": "Bart & Yeti", "type": "rustic pub", "address": "553 E. Lionshead, Vail, Co"},
+
+        "restaurants": {"name": "Matsuhisa", "type": "japansese/sushi", "address": "141 East Meadow Dr., Vail, Co",
+        "name": "Pazzo's Pizzeria", "type": "italian", "address": "122 E. Meadow Dr., Vail, Co",
+        "name": "Mountain Standard", "type": "new american", "address": "193 Gore Creek, Vail, Co"
+  }
+ }
+}]
+
+
