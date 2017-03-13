@@ -6,6 +6,8 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+require('./db/db');
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('views', path.join(__dirname, 'views'));
@@ -18,8 +20,6 @@ app.use(session({
 	cookie: {secure: false}
 }));
 
-//database
-// require('./db/db');
 
 app.use(express.static(path.join(__dirname, 'public')));
 

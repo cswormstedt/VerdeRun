@@ -4,11 +4,11 @@ var connectionString = 'mongodb://localhost/greenrun'
 
 mongoose.connect(connectionString);
 
-mongoose.connection.on('connected' function(){
+mongoose.connection.on('connected', function(){
 	console.log("connected to " + connectionString);
 });
 
-mongoose.connection.on('error' function(){
+mongoose.connection.on('error', function(){
 	console.log("MongoDB error " + error);
 });
 
