@@ -23,6 +23,18 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+var userController = require('./controllers/UserController');
+var homeController = require('./controllers/homeController');
+var profileController = require('./controllers/ProfileController');
+
+
+app.use('/user', userController);
+app.use('/home', homeController);
+app.use('/profile', profileController);
+
+
+
+
 
 server.listen(3000, function(){
 	console.log("listening on port 3000");
