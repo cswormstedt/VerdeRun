@@ -19,27 +19,16 @@
 .register {
   margin: 5px;
 }
-section .register-form {
-  height: auto;
-  width: 300px;
-  background-color: rgba(218, 220, 215, 0.6);
-}
 section {
   width: 100%;
   text-align: center;
 }
 .startimg {
-
   background-image: url('https://summitcountyski.files.wordpress.com/2010/12/main-street-telluride.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-
-  background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/01/b0/fa/19/vail-mountain-at-night.jpg');
-  background-size: cover;
-  repeat-style: no-repeat;
-
 }
 .circle {
   width: 45px;
