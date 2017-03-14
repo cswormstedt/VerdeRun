@@ -1,28 +1,87 @@
 @red: #BF0009;
+@green: #127c01;
 
 
 .login {
-	text-align: right;
+	position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+.header {
+	height: 80px;
+    background: white;
+    display: block;
+
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome {
+	color: @green;
 }
 
 .register {
-	text-align: right;
+	margin: 5px;
+}
+
+section .register-form {
+	height: auto;
+	width: 300px;
+	background-color: rgba(218, 220, 215, 0.6);
+
+}
+
+section {
+	width: 100%;
+	text-align: center;
 }
 
 .startimg {
-	background-image: url('http://i.cdn.turner.com/cnn/2010/TRAVEL/12/24/western.ski.towns/t1larg.western.ski.jpg');
-	background-size: cover;
+	height: auto;
+    background-image: url('https://summitcountyski.files.wordpress.com/2010/12/main-street-telluride.jpg');
+    background-size: auto 250%;
+    background-repeat: no-repeat;
+    
 }
-
+// http://i.cdn.turner.com/cnn/2010/TRAVEL/12/24/western.ski.towns/t1larg.western.ski.jpg
 .circle {
 	width: 45px;
     height: 45px;
     border-radius: 50%;
     background: #127C01;
-    text-align: left;
+    position: absolute;
+    top: 15px;  
+    left: 30px;
 }
 
-h1 {
-	background-color: @red;
+.title {
 	color: #127C01;
+	position: absolute;
+    left: 85px;
+}
+
+
+/////////////////
+//////modal//////
+/////////////////
+.modalHide {
+	opacity: 0;
+}
+
+.register-modal {
+	position: fixed;
+	background-color: white;
+	color: black;
+	top: 206px;
+	width: 100%;
+	padding: 1%;
+	animation: modal-animate 2s;
+	opacity: 1;
+	z-index: 100;
+	box-shadow: 1px 2px 3px 100rem rgba(100,100,100, 0.7);
+
 }
