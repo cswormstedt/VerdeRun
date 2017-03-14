@@ -15,7 +15,11 @@ router.get('/', function(req, res){
 });
 
 router.post('/', function(req,res){
-		res.render( 'profile', {mountainsArray: mountains});
+		console.log('hiiii');
+		mountain.find(function(err, mountains){
+		res.render( 'profile', {mountainsArray: mountains});	
+		});
+	
 
 	});
 

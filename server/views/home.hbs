@@ -14,7 +14,10 @@
 
 {{#each mountainsArray}}
 <div class="accordion">
+      
+
         <div id="one" class="section" data-id="{{ this.id }}">
+
                 <h3>
                         <a href="#one"> {{this.name}}{{this.state}}</a>
                 </h3>
@@ -29,6 +32,8 @@
 
                 </div>
         </div>
+         <form action="/profile" method="Post"> <button class ="place"> + </button> 
+         </form>
 </div>
 {{/each}}
 
