@@ -6,14 +6,44 @@
 						<h1 class="title">Green Run</h1>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
-					<h1>hello {{username}}</h1>
+					<h1>Welcome {{username}}</h1>
 				</div>
 			</div>
 		</div>
 </header>
 
+{{#each mountainsArray}}
+<div class="accordion">
+        <div id="one" class="section" data-id="{{ this.id }}">
+                <h3>
+                        <a href="#one"> {{this.name}}{{this.state}}</a>
+                </h3>
+                <div>
+                        <p>{{this.trails.number}}</p>
+                        <p>{{this.trails.open}}</p>
+                        <p>{{this.trails.closed}}</p>
+                        <p>{{this.conditions}}</p>
+                        <p>{{this.nightlife}}</p>
+                        <p>{{this.nightlife.bars}}</p>
+                        <p>{{this.nightlife.restaurants}}</p>
 
-<div class="mountainOne">
+                </div>
+        </div>
+</div>
+{{/each}}
+        <!-- <div id="two" class="section">
+                <h3>
+                        <a href="#two">Heading 2</a>
+                </h3>
+                <div>
+                        <p>Content</p>
+                </div>
+        </div>
+</div> -->
+
+
+
+{{!-- <div class="mountainOne">
 	<div class="mountainName">
 		<div class="condition">
 			<div class="temp">
@@ -23,4 +53,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --}}

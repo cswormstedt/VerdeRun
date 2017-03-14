@@ -25,7 +25,7 @@ router.post('/start', function(req, res){
 					req.session.userId     = user.id;
 					req.session.isLoggedIn = true;
 
-					res.redirect('/home');
+					res.redirect('/profile');
 				}
 				else{
 					//send them a message wrong username or password
@@ -69,7 +69,7 @@ router.post('/register', function(req, res){
 							req.session.isLoggedIn = true;
 
 							//redirect to home
-							res.redirect('/profile');
+							res.redirect('/home');
 						}
 						else{
 							res.send('there was an error');

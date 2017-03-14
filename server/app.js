@@ -9,6 +9,8 @@ var https = require('https');
 
 
 require('./db/db');
+// mongoimport --db greenrun --collection mountains mountain.json --jsonArray
+//import in the directory file is in
 
 app.use(bodyParser.urlencoded({extended: true}));
 
