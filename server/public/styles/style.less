@@ -1,28 +1,127 @@
 @red: #BF0009;
+@green: #127c01;
 
 
 .login {
-	text-align: right;
+	position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+.header {
+	height: 80px;
+    background: white;
+    display: block;
+
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome {
+	color: @green;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .register {
-	text-align: right;
+	margin: 5px;
+}
+
+section .register-form {
+	height: auto;
+	width: 300px;
+	background-color: rgba(218, 220, 215, 0.6);
+
+}
+
+section {
+	width: 100%;
+	text-align: center;
 }
 
 .startimg {
-	background-image: url('http://i.cdn.turner.com/cnn/2010/TRAVEL/12/24/western.ski.towns/t1larg.western.ski.jpg');
-	background-size: cover;
+    background-image: url('https://summitcountyski.files.wordpress.com/2010/12/main-street-telluride.jpg');
+    // this allows for responive back ground img
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    
 }
-
+// http://i.cdn.turner.com/cnn/2010/TRAVEL/12/24/western.ski.towns/t1larg.western.ski.jpg
 .circle {
 	width: 45px;
     height: 45px;
     border-radius: 50%;
     background: #127C01;
-    text-align: left;
+    position: absolute;
+    top: 15px;  
+    left: 30px;
 }
 
-h1 {
-	background-color: @red;
+.title {
 	color: #127C01;
+	position: absolute;
+    left: 85px;
+}
+
+
+/////////////////
+//////modal//////
+/////////////////
+.modalHide {
+	opacity: 0;
+}
+
+.register-modal {
+	position: fixed;
+	background-color: white;
+	color: black;
+	top: 206px;
+	width: 100%;
+	padding: 1%;
+	animation: modal-animate 2s;
+	opacity: 1;
+	z-index: 100;
+	box-shadow: 1px 2px 3px 100rem rgba(100,100,100, 0.7);
+
+}
+
+/////////////////
+//////button/////
+/////////////////
+button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px 6px;
+    border: 1px solid #147f00;
+    border-radius: 3px;
+    background: #127a00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#127a00), to(#147f00));
+    background: -moz-linear-gradient(top, #127a00, #147f00);
+    background: linear-gradient(to bottom, #127a00, #147f00);
+    text-shadow: #0c4b00 1px 1px 1px;
+    font: normal normal normal 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+button:hover,
+button:focus {
+    border: 1px solid ##179500;
+    background: #169200;
+    background: -webkit-gradient(linear, left top, left bottom, from(#169200), to(#189800));
+    background: -moz-linear-gradient(top, #169200, #189800);
+    background: linear-gradient(to bottom, #169200, #189800);
+    color: #ffffff;
+    text-decoration: none;
+}
+button:active {
+    background: #0b4900;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0b4900), to(#147f00));
+    background: -moz-linear-gradient(top, #0b4900, #147f00);
+    background: linear-gradient(to bottom, #0b4900, #147f00);
 }
