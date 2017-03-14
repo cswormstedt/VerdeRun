@@ -14,9 +14,15 @@ $('.signUpOne').on('click',function(e){
 $('.place').on('click', function(e){
 	var mountainName = $(e.target).parent();
 	var id = mountainName.data('id');
+	console.log(id);
+
+	var favId = {mountainId: id}
+	
+
 	$.ajax({
-		url: '/' + id,
-		type: 'Get',
+		url: '/profile',
+		type: 'POST',
+		data: favId,
 		success: function(res){
 			console.log(res);
 		},
@@ -26,16 +32,7 @@ $('.place').on('click', function(e){
 	})
 });
 
-$.ajax({
-	url: '/profile/',
-	type: "POST",
-	success: function(result){
-		console.log("this is the result");
-	},
-	error: function(err){
-		console.log(err);
-	}
-})
+
 
 
 $('.signUpExit').on('click', function(e){
