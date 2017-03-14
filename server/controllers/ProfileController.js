@@ -1,5 +1,6 @@
 var express = require('express');
 var router 	= express.Router();
+var mountain = require('../models/Mountain.js');
 
 
 
@@ -11,7 +12,12 @@ router.get('/', function(req, res){
 	else {
 		res.redirect('/user/start');
 	}
-})
+});
+
+router.post('/', function(req,res){
+		res.render( 'profile', {mountainsArray: mountains});
+
+	});
 
 
 module.exports = router;
