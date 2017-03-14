@@ -67,6 +67,9 @@ section {
 /////////////////
 .modalHide {
 	opacity: 0;
+    .register-modal{
+        opacity: 0;
+    }
 }
 
 .register-modal {
@@ -86,6 +89,17 @@ section {
 /////////////////
 //////button/////
 /////////////////
+.signUpExit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: black;
+    background: transparent;
+    border: none;
+    padding: 2 6px;
+    font: 18px;
+}
+
 button {
     display: inline-block;
     text-align: center;
@@ -119,9 +133,11 @@ button:active {
     background: linear-gradient(to bottom, #0b4900, #147f00);
 }
 
-////////////////
-////accordion///
-////////////////
+
+
+/////////////////
+////accordion////
+/////////////////
 .accordion h3 + div {
         height: 0;
         overflow: hidden;

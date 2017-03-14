@@ -1,45 +1,47 @@
 <body class="startimg">
+
 	<header class="header">
+
 		<div class="header-container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-sx-10 bg-primary">
-						<div class="circle"></div>
-						<h1 class="title">Green Run</h1>
+					<div class="circle"></div>
+					<h1 class="title">Green Run</h1>
 				</div>
-					<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6 bg-success">
-						<form class="login" action="/user/start" method="POST">
-							<input type="text" value="" name="username" placeholder="Username"/>
-							<input type="password" value="" name="password" placeholder="Password"/>
-							<button type="submit"> Log in</button>
-						</form>
-					{{ message }}
-					</div>
-			</div>
-		</header>
-		
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-sx-6 "><!--bg-success-->
-				<section class="register-form">
-					<h2 class="welcome">Welcome to Green Run</h2>
-					<p class="welcome">The easiest run to a fun time</p>
-						<div class="modalButton">
-							<button class="signUpOne">Sign Up</button>
-						</div>
-						<div class="modalHide">
-							
-							<form action="/user/register" method="POST"><br>
-							<span style="color: red">{{ loginmessage }}</span><br>
-								<input class="register" type="text" value="" name="email" placeholder="Email"/><br>
-								<input class="register" type="text" value="" name="username" placeholder="Username"/><br>
-								<input class="register" type="password" value="" name="password" placeholder="Password"/><br>
-								<button class="register" type="submit"> Submit</button>
-							</form>
-						</div>
-					
-				</section>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6 bg-success">
+					<form class="login" action="/user/start" method="POST">
+						<input type="text" value="" name="username" placeholder="Username"/>
+						<input type="password" value="" name="password" placeholder="Password"/>
+						<button type="submit"> Log in</button>
+					</form>
+				{{ message }}
+				</div>
 			</div>
 		</div>
-	</div>
-
+	</header>
+		
+	<section class="register-form">
+		
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-sx-6 ">
+				<h2 class="welcome">Welcome to Green Run</h2>
+				<p class="welcome">The easiest run to a fun time</p>
+				<div class="modalButton">
+					<button class="signUpOne">Sign Up</button>
+				</div>
+				<div class="modalHide">
+					<form action="/user/register" method="POST"><br>
+					<span style="color: red">{{ loginmessage }}</span><br>
+						<input class="register" type="text" value="" name="email" placeholder="Email"/><br>
+						<input class="register" type="text" value="" name="username" placeholder="Username"/><br>
+						<input class="register" type="password" value="" name="password" placeholder="Password"/><br>
+						<button class="register" type="submit"> Submit</button>
+					</form>
+					<button class="signUpExit">X</button>
+				</div>
+			</div>
+		</div>
+		
+	</section>
 </body>
 

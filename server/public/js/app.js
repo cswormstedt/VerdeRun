@@ -47,4 +47,10 @@ $('.signUpOne').on('click',function(e){
 	$('.signUpOne').hide();
 })
 
+$('.signUpExit').on('click', function(e){
+	console.log('click');
+	$('.modalHide').removeClass('register-modal');
+	$('.signUpOne').show();
+})
+
 // })
