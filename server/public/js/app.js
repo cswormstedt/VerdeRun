@@ -3,12 +3,21 @@ console.log('yo');
 var response = {};
 
 // $.ajax({
+
 // 	url: 'https://api.darksky.net/forecast/48fa37f6c40f1efed51b97ee6b3d4671/39.6403,-106.3742',
 // 	type: 'GET',
 // 	dataType: 'json',
-<<<<<<< HEAD
+
 
 // 	succes: function(data){
+// 		console.log(data);
+		
+// 	},
+
+// 	url: 'http://api.darksky.net/forecast/48fa37f6c40f1efed51b97ee6b3d4671/39.6403,-106.3742',
+// 	type: 'GET',
+// 	dataType: 'json',
+// 	success: function(data){
 // 		console.log(data);
 		
 // 	},
@@ -18,7 +27,7 @@ var response = {};
 //   },
 
 // })''
-=======
+
 
 // 	succes: function(data){
 // 		response = data;
@@ -37,4 +46,5 @@ $('.signUpOne').on('click',function(e){
 	$('.modalHide').toggleClass('register-modal');
 	$('.signUpOne').hide();
 })
->>>>>>> 7be1bdb75cafe10bab0304866ea5b41d77085430
+
+// })
