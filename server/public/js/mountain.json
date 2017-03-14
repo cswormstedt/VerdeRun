@@ -37,7 +37,47 @@
 		}]
 	}
 
+},
+
+
+{
+	"name": "Jackson Hole",
+	"state": "Wyoming",
+	"trails": {
+		"number": 130,
+		"open": 126,
+		"closed": 10
+	},
+	"conditions": "sunny",
+	"nightlife": {
+		"bars": [{
+			"name": "Bin22",
+			"type": "wine-bar",
+			"address": "200 Broadway, Jackson, Wy"
+		}, {
+			"name": "Million Dollar Cowboy",
+			"type": "live music",
+			"address": "25 N. Cache St., Jackson, Wy"
+		}, {
+			"name": "Snake River Brewing",
+			"type": "brewery",
+			"address": "265 South Milward Street, Jackson, Wy"
+		}],
+
+		"restaurants": [{
+			"name": "Gun Barrel",
+			"type": "steakhouse",
+			"address": "862 West Broadway, Jackson, Wy"
+		}, {
+			"name": "The Kitchen",
+			"type": "modern",
+			"address": "155 Glenwood Street, Jackson, Wy"
+		}, {
+			"name": "Bubba Bar B Que",
+			"type": "bbq",
+			"address": "100 Flat Creek Drive, Jackson, Wy"
+		}]
+	}
+
 }]
-
-
 

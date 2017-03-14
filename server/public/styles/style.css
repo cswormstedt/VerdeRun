@@ -5,8 +5,9 @@
   text-align: right;
 }
 .startimg {
-  background-image: url('http://i.cdn.turner.com/cnn/2010/TRAVEL/12/24/western.ski.towns/t1larg.western.ski.jpg');
+  background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/01/b0/fa/19/vail-mountain-at-night.jpg');
   background-size: cover;
+  repeat-style: no-repeat;
 }
 .circle {
   width: 45px;

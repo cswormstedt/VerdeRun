@@ -1,7 +1,7 @@
 var express = require('express');
 var router 	= express.Router();
 var mountain = require("../models/Mountain");
-var mountainJson = require('../js/moutain.json')
+// var mountainJson = require('../js/mountain.json')
 
 router.get('/', function(req, res){
 	console.log(mountain);
