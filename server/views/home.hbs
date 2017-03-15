@@ -35,12 +35,16 @@
             <p>{{this.trails.open}}</p>
             <p>{{this.trails.closed}}</p>
             <p>{{this.conditions}}</p>
-            <p>{{this.nightlife}}</p>
+          <p>{{# each this.nightlife.bars}}</p>
+                {{this.name}}<br>
+                {{this.type}}<br>
+                {{this.address}}<br>
+                {{/each}}
             <p>{{# each this.nightlife.restaurants}}</p>
-                {{this.name}}
-          {{!--   {{mountainsArray.[1].trails.number}} --}}
-           {{!--  <p>{{this.nightlife.restaurants}}</p> --}}
-              {{/each}}
+                {{this.name}}<br>
+                {{this.type}}<br>
+                {{this.address}}<br>
+                {{/each}}
             <button class ="place"> + </button>
         </div>
     </div>
@@ -48,16 +52,6 @@
   </div>
 
 
-{{!-- <div class="mountainOne">
-	<div class="mountainName">
-		<div class="condition">
-			<div class="temp">
-				<div class="icon">
-					<img src=""/>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> --}}
+
 
 <a href="/user/logout">LOGOUT</a>

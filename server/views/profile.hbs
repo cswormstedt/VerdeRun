@@ -8,7 +8,18 @@
 				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
 					<h2 class="hello"> {{ username }} profile</h2>
 					{{#each favoriteMountainArray}}
-					<p>{{this.name}}</p>
+					
+					<div class="mountain"><p>{{this.conditions}}</p>
+						<div class="mountainName">
+							<div class="condition">
+								<div class="temp">
+									<div class="icon">
+										<img src=""/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					{{/each}}
 
 
