@@ -8,7 +8,12 @@ var mongoose = require('mongoose')
 
 router.get('/', function(req, res){
 	if(req.session.isLoggedIn){
-		res.render('profile', {username: req.session.username, favoriteMountain: req.body.favoriteMountain});
+		var userId = req.session.userId;
+		console.log(req.session.userId)
+		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
+		console.log(user.favoriteMountain);
+		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain});
+	})
 	}
 	else {
 		res.redirect('/user/start');
@@ -16,10 +21,8 @@ router.get('/', function(req, res){
 });
 //this is on profile page and should be able to but it render into a hbs
 router.post('/', function(req,res){
-	
 
 	var mountainId = req.body.mountainId
-
 	var mountain =	mountainId
 	console.log(mongoose.Types.ObjectId.isValid(mountainId), ' this is mid')
 	
@@ -30,12 +33,18 @@ router.post('/', function(req,res){
 		console.log(users.favoriteMountain, ' this is user mountain')
 	// User.find({favoriteMountain: 'Mountain'}).populate(mountainId);
 		users.favoriteMountain.push(mountain);
+
+
+
+	
+
+
 		users.save();
-		res.send('hi')
-	})
-	//
-	
+	});
+
+
 });
-	
+
+
 
 module.exports = router;

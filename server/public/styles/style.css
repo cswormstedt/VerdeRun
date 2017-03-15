@@ -53,14 +53,6 @@ section {
   position: absolute;
   left: 85px;
 }
-.hi {
-  font-family: 'Architects Daughter', cursive;
-  text-align: center;
-}
-.hello {
-  font-family: 'Architects Daughter', cursive;
-  text-align: center;
-}
 .modalHide {
   opacity: 0;
 }
