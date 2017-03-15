@@ -39,6 +39,15 @@ section {
   top: 15px;
   left: 30px;
 }
+.userCircle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
 .title {
   color: #127C01;
   position: absolute;
@@ -113,7 +122,7 @@ button:active {
   background: linear-gradient(to bottom, #0b4900, #147f00);
 }
 .accordion h3 + div {
-  height: 1;
+  height: 0;
   overflow: hidden;
   -webkit-transition: height 0.3s ease-in;
   -moz-transition: height 0.3s ease-in;
@@ -122,7 +131,7 @@ button:active {
   transition: height 0.3s ease-in;
 }
 .accordion :target h3 + div {
-  height: 200px;
+  height: 100px;
 }
 .accordion .section.large:target h3 + div {
   overflow: auto;
@@ -130,6 +139,6 @@ button:active {
 #one {
   text-align: center;
 }
-/*#two {
+#two {
   text-align: center;
-}*/
+}
