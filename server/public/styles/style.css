@@ -128,3 +128,9 @@ button:active {
 .accordion .section.large:target h3 + div {
   overflow: auto;
 }
+#one {
+  text-align: center;
+}
+#two {
+  text-align: center;
+}
