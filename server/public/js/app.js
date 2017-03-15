@@ -35,6 +35,8 @@ $('.place').on('click', function(e){
 
 
 
+
+
 $('.signUpExit').on('click', function(e){
 	console.log('click');
 	$('.modalHide').removeClass('register-modal');
