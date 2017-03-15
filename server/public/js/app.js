@@ -2,6 +2,9 @@ console.log('yo');
 //weather api ajax
 var response = {};
 
+$(document).on('ready', function(){
+    $(".accordion").accordion();
+});
 
 
 $('.signUpOne').on('click',function(e){

@@ -44,6 +44,14 @@ section {
   position: absolute;
   left: 85px;
 }
+.hi {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
+.hello {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
 .modalHide {
   opacity: 0;
 }
@@ -105,7 +113,7 @@ button:active {
   background: linear-gradient(to bottom, #0b4900, #147f00);
 }
 .accordion h3 + div {
-  height: 0;
+  height: 1;
   overflow: hidden;
   -webkit-transition: height 0.3s ease-in;
   -moz-transition: height 0.3s ease-in;
@@ -114,8 +122,14 @@ button:active {
   transition: height 0.3s ease-in;
 }
 .accordion :target h3 + div {
-  height: 100px;
+  height: 200px;
 }
 .accordion .section.large:target h3 + div {
   overflow: auto;
 }
+#one {
+  text-align: center;
+}
+/*#two {
+  text-align: center;
+}*/
