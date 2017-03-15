@@ -10,8 +10,8 @@ var mountainSchema = new mongoose.Schema({
 	},
 	conditions: String,
 	nightlife: {
-		bars:{name: String, type: String, address: String},
-		restaurants: {name: String, type: String, address: String}
+		bars:[],
+		restaurants: []
 	},
 })
 

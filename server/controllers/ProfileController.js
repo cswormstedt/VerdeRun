@@ -9,8 +9,6 @@ var mongoose = require('mongoose')
 router.get('/', function(req, res){
 	if(req.session.isLoggedIn){
 
-		res.render('profile', {username: req.session.username});
-=======
 		var userId = req.session.userId;
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
@@ -40,8 +38,6 @@ router.post('/', function(req,res){
 
 		users.save();
 		res.render('profile', {favoriteMountain: []})
-	})
-	//
 
 	
 

@@ -18,54 +18,35 @@
 		</div>
 </header>
 
-
-<div class="accordion">
- {{#each mountainsArray}}     
-
-        <div id="one" class="section" data-id="{{ this.id }}">
-                
-                <button class ="place"> + </button> 
-                
-                <h3>
-                        <a href="#one"> {{this.name}}, {{this.state}}</a>
-                </h3>
-                <div>
-                        <p>{{this.trails.number}}</p>
-                        <p>{{this.trails.open}}</p>
-                        <p>{{this.trails.closed}}</p>
-                        <p>{{this.conditions}}</p>
-                        <p>{{this.nightlife}}</p>
-                        {{!-- <p>{{this.nightlife.bars}}</p>
-                        <p>{{this.nightlife.restaurants}}</p> --}}
-
-                </div>
-
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+ {{#each mountainsArray}}    
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading" data-id="{{ this.id }}">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{@index}}" aria-expanded="false" aria-controls="">
+          {{this.name}}, {{this.state}}
+        </a>
+      </h4>
+    </div>
+    <div id="collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+        <div class="panel-body">
+        <p>{{@index}} this os at index</p>
+            <p>{{this.trails.number}}</p>
+            <p>{{this.trails.open}}</p>
+            <p>{{this.trails.closed}}</p>
+            <p>{{this.conditions}}</p>
+            <p>{{this.nightlife}}</p>
+            <p>{{# each this.nightlife.restaurants}}</p>
+                {{this.name}}
+          {{!--   {{mountainsArray.[1].trails.number}} --}}
+           {{!--  <p>{{this.nightlife.restaurants}}</p> --}}
+              {{/each}}
+            <button class ="place"> + </button>
         </div>
-         {{!-- <form action="" method="Post"> --}} 
-{{!--         </form> --}}
-{{/each}}
-</div>
+    </div>
+    {{/each}}
+  </div>
 
-{{!-- {{/each}}
-
-
-{{#each mountainsArray}} --}}
-{{!--  <div id="two" class="section" data-id="{{ this.id }}">
-                <h3>
-                        <a href="#two">{{this.name}}, {{this.state}}</a>
-                </h3>
-                <div>
-                        <p>{{this.trails.number}}</p>
-                        <p>{{this.trails.open}}</p>
-                        <p>{{this.trails.closed}}</p>
-                        <p>{{this.conditions}}</p>
-                        <p>{{this.nightlife}}</p>
-                        <p>{{this.nightlife.bars}}</p>
-                        <p>{{this.nightlife.restaurants}}</p>
-                        
-                </div>
-    </div> --}}
-{{!-- </div>  --}}
 
 {{!-- <div class="mountainOne">
 	<div class="mountainName">

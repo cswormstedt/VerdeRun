@@ -7,15 +7,10 @@ $(document).on('ready', function(){
 });
 
 
-$('.signUpOne').on('click',function(e){
-	console.log('click');
-	$('.modalHide').toggleClass('register-modal');
-	$('.signUpOne').hide();
-});
 
 
 $('.place').on('click', function(e){
-	var mountainName = $(e.target).parent();
+	var mountainName = $(e.target).parent().parent();
 	var id = mountainName.data('id');
 	console.log(id);
 
@@ -37,13 +32,20 @@ $('.place').on('click', function(e){
 
 
 
-
+$('.signUpOne').on('click',function(e){
+	console.log('click');
+	$('.modalHide').toggleClass('register-modal');
+	$('.signUpOne').hide();
+});
 
 
 $('.signUpExit').on('click', function(e){
 	console.log('click');
 	$('.modalHide').removeClass('register-modal');
 	$('.signUpOne').show();
-})
+});
+
+
+
 
 
