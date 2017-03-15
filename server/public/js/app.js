@@ -2,12 +2,6 @@ console.log('yo');
 //weather api ajax
 var response = {};
 
-$(document).on('ready', function(){
-    $(".accordion").accordion();
-});
-
-
-
 
 $('.place').on('click', function(e){
 	var mountainName = $(e.target).parent().parent();
@@ -30,7 +24,9 @@ $('.place').on('click', function(e){
 	})
 });
 
-
+/////////////////
+/////sign in/////
+/////////////////
 
 $('.signUpOne').on('click',function(e){
 	console.log('click');
@@ -44,6 +40,17 @@ $('.signUpExit').on('click', function(e){
 	$('.modalHide').removeClass('register-modal');
 	$('.signUpOne').show();
 });
+
+
+//////////////////
+////weather api///
+//////////////////
+
+$.ajax({
+	url: '',
+	type: 'GET',
+	dataType: 'json',
+})
 
 
 
