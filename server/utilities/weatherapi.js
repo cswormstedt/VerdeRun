@@ -23,7 +23,7 @@ function getWeather(){
 
         var weather = JSON.parse(body)
         console.log("The weather is currently " + weather.currently.summary + " with a temperature of " + weather.currently.temperature + " with windspeeds at " + weather.currently.windSpeed + "mph ");
-        var profileWeather = { current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon}
+        return { current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon}
 
       }
       else {
@@ -37,4 +37,4 @@ function getWeather(){
 
 
 
-module.exports = getWeather;
+module.exports.get = getWeather;
