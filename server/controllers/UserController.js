@@ -5,12 +5,12 @@ var bcrypt  = require('bcryptjs');
 
 
 router.get('/start', function(req, res){
-	console.log("user get");
+	// console.log("user get");
 	res.render('start', {});
 });
 
 router.post('/start', function(req, res){
-	console.log(req.body);
+	// console.log(req.body);
 	
 	//first query the database and find the user
 	User.findOne({username: req.body.username}, function(err, user){

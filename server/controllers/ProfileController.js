@@ -3,17 +3,21 @@ var router 	= express.Router();
 var mountain = require('../models/Mountain.js');
 var User = require('../models/User');
 var mongoose = require('mongoose')
+var weather = require('../utilities/weatherapi.js');
 
 
 
 router.get('/', function(req, res){
+
+	console.log(weather);
 	if(req.session.isLoggedIn){
 
 		var userId = req.session.userId;
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
+		
 		console.log(user.favoriteMountain);
-		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain});
+		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain });
 	})
 
 	}
@@ -39,10 +43,6 @@ router.post('/', function(req,res){
 		users.save();
 		res.render('profile', {favoriteMountain: []})
 
-	
-
-
-		users.save();
 	});
 
 

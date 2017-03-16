@@ -3,14 +3,15 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-sx-10">
 						<div class="circle"></div>
-						<h1 class="title">Green Run</h1>
+						<h1 class="title">Settings</h1>
 				</div>
                                
 				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
 
-					<h1 class="hi"> Welcome {{username}} </h1>
+					<h3 class="hi">{{username}} pick your favs </h3>
 
-					
+					<a href="/profile">{{username}} page</a>
+                    <a href="/user/logout">LOGOUT</a>
 					<div class="userCircle"></div>
 
 				</div>
@@ -25,7 +26,7 @@
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{@index}}" aria-expanded="false" aria-controls="">
           {{this.name}}, {{this.state}}
-        </a>
+        </a> <button class ="place"> + </button>
       </h4>
     </div>
     <div id="collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
@@ -46,7 +47,7 @@
                 {{this.type}}<br>
                 {{this.address}}<br>
                 {{/each}}
-            <button class ="place"> + </button>
+           
         </div>
     </div>
     {{/each}}
@@ -55,4 +56,3 @@
 
 
 
-<a href="/user/logout">LOGOUT</a>
