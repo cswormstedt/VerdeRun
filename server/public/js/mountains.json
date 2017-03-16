@@ -1,0 +1,43 @@
+[{
+	"name": "Heavenly Lake Tahoe",
+	"state": "California",
+	"img" : "http://img4.onthesnow.com/image/la/40/4023.jpg",
+	"trails": {
+		"number": 97,
+		"open": 91,
+		"closed": 6
+	},
+	"conditions": "partly sunny and windy",
+	"nightlife": {
+		"bars": [{
+			"name": "Blu",
+			"type": "nightclub",
+			"address": "55 US Highway 50, Stateline, NV 89449"
+		}, {
+			"name": "Tahoe Mountain Brewing Co.",
+			"type": "brewery",
+			"address": "Cobblestone Center, 475 N Lake Blvd, Tahoe City, CA"
+		}, {
+			"name": "Turn 3",
+			"type": "Nascar theme bar",
+			"address": "Kings Trading Post, 2227 Lake Tahoe Blvd, South Lake Tahoe, CA"
+		}],
+
+		"restaurants": [{
+			"name": "Booyah's",
+			"type": "exotic burgers",
+			"address": "3860 Saddle Rd, South Lake Tahoe, CA 96150"
+		}, {
+			"name": "Cabo Wabo Cantina",
+			"type": "mexican",
+			"address": "15 Hwy 50, Lake Tahoe, NV 89449"
+		}, {
+			"name": "Friday's Station",
+			"type": "seafood and steak",
+			"address": "15 Us Hwy 50, Stateline, NV 89449"
+		}]
+	}
+
+}]
+
+
