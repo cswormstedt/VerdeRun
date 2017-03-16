@@ -9,8 +9,8 @@
 					<h2 class="hello"> {{ username }} profile</h2>
 					{{#each favoriteMountainArray}}
 					
-					<div class="mountain"><p>{{this.conditions}}</p>
-						<div class="mountainName">
+					<div class="mountain"><p>{{this.name}}</p>
+						{{!-- <div class="mountainName">
 							<div class="condition">
 								<div class="temp">
 									<div class="icon">
@@ -19,11 +19,12 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					{{/each}}
+					</div> --}}
+				
 
 
 				</div>
+					{{/each}}
 			</div>
 		</div>
 </header>
