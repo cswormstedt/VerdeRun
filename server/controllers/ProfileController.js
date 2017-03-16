@@ -55,7 +55,7 @@ router.delete('/:id', function(req, res){
 	var userId = req.session.userId;
 	User.findById(userId, function(err, user){
 	user.favoriteMountain.pull(id);
-	user.save()
+	user.save();
 	console.log(user);
 	res.send('success');
 	});

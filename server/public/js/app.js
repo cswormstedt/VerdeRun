@@ -28,17 +28,24 @@ $('.remove').on('click', function(e){
 	var id = button.data('id');
 	var favId = {mountainId: id};
 
+	
 	$.ajax({
 		url: '/profile/' + id,
 		type: 'DELETE',
-		success: function(result){
-			console.log(result);
+		success: function(){
+			console.log();
+			location.reload();
+			
+			// $('.user-mountains').removeClass();
 		},
 		error: function(err){
 			console.log(err)
 		}
-	})
+	});
+
+
 });
+
 
 /////////////////
 /////sign in/////
