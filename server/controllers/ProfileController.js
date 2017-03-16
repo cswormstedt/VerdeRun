@@ -48,6 +48,20 @@ router.post('/', function(req,res){
 
 });
 
+router.delete('/:id', function(req, res){
+	var id = req.params.id;
+	var userId = req.session.userId;
+	User.findById(userId, function(err, user){
+	user.favoriteMountain.pull(id);
+	user.save()
+	console.log(user);
+	res.send('success');
+	});
+
+})
+
+
+
 
 
 module.exports = router;
