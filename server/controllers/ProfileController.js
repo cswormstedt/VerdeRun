@@ -8,8 +8,9 @@ var weather = require('../utilities/weatherapi.js');
 
 
 router.get('/', function(req, res){
+	console.log(weather(), ' this is weather')
 
-	console.log(weather);
+	
 	if(req.session.isLoggedIn){
 
 		var userId = req.session.userId;
