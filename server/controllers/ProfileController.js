@@ -8,7 +8,7 @@ var weather = require('../utilities/weatherapi.js');
 
 
 router.get('/', function(req, res){
-	console.log(weather(), ' this is weather')
+	console.log(weather.get(), ' this is weather')
 
 	
 	if(req.session.isLoggedIn){
