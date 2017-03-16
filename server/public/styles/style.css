@@ -52,6 +52,16 @@ section {
   background-attachment: fixed;
   background-position: center center;
 }
+.panel-heading {
+  color: #ffffff;
+  text-shadow: 0 1px 5px #000000;
+}
+.favMount {
+  font-size: 200%;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 1px 5px #000000;
+}
 #favMount {
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,10 +112,6 @@ section {
 .user-header {
   border-bottom: 1px solid black;
   height: 80px;
-}
-.favMount {
-  font-size: 200%;
-  font-weight: bold;
 }
 .weather-icon {
   margin-left: 25px;
