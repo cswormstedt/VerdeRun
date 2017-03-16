@@ -44,6 +44,7 @@
 {
 	"name": "Jackson Hole",
 	"state": "Wyoming",
+	"img" : "http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg",
 	"trails": {
 		"number": 130,
 		"open": 126,
