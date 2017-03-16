@@ -22,6 +22,14 @@ $('.place').on('click', function(e){
 	})
 });
 
+$('.place').hover(function(){
+	$(this).append($('<span> Click to add to profile page </span>'));
+
+}, function(){
+	$(this).find('span:last').remove();
+	
+});
+
 $('.remove').on('click', function(e){
 	console.log('click');
 	var button = $(e.target);
