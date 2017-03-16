@@ -8,7 +8,7 @@ var weather = require('../utilities/weatherapi.js');
 
 
 router.get('/', function(req, res){
-	console.log(weather.get(), ' this is weather')
+	
 
 	
 	if(req.session.isLoggedIn){
@@ -16,8 +16,12 @@ router.get('/', function(req, res){
 		var userId = req.session.userId;
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
-		
-		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain});
+			
+
+			weather.get(user.favoriteMountain, function(favoriteMountainArray){
+				res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray});
+				// res.send(apiWeather);
+			});
 	})
 
 		// , current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon }
