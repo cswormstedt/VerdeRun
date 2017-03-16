@@ -27,7 +27,7 @@ $('.remove').on('click', function(e){
 	var button = $(e.target);
 	var id = button.data('id');
 	var favId = {mountainId: id};
-
+	var container = $('.remove').parent().parent().parent().parent()
 	
 	$.ajax({
 		url: '/profile/' + id,
@@ -35,6 +35,7 @@ $('.remove').on('click', function(e){
 		success: function(){
 			console.log();
 			location.reload();
+			container.empty()
 			
 			// $('.user-mountains').removeClass();
 		},
