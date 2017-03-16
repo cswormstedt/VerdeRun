@@ -22,6 +22,24 @@ $('.place').on('click', function(e){
 	})
 });
 
+$('.remove').on('click', function(e){
+	console.log('click');
+	var button = $(e.target);
+	var id = button.data('id');
+	var favId = {mountainId: id};
+
+	$.ajax({
+		url: '/profile/' + id,
+		type: 'DELETE',
+		success: function(result){
+			console.log(result);
+		},
+		error: function(err){
+			console.log(err)
+		}
+	})
+});
+
 /////////////////
 /////sign in/////
 /////////////////
