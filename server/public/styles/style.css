@@ -45,6 +45,12 @@ section {
   font-size: 25px;
   text-decoration: underline;
 }
+
+.hi{
+  font-family: 'Amatic SC', cursive;
+  color: #127C01;
+  font-size: 50px;
+}
 .startimg {
   background-image: url('http://christysports.com/theridgereport/wp-content/uploads/2016/03/Super-Brews-1.jpg');
   background-size: cover;
@@ -68,21 +74,21 @@ section {
   background-attachment: fixed;
   background-position: center center;
 }
-.vail {
-  background-image: url('http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx');
-}
-.jackson {
-  background-image: url('http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg');
-}
-.heavenly {
-  background-image: url('http://img4.onthesnow.com/image/la/40/4023.jpg');
-}
-.parkcity {
-  background-image: url('http://www.equityresidences.com/wp-content/uploads/2013/12/IMG_0863_v21.jpg');
-}
-.snowbird {
-  background-image: url('http://images.fineartamerica.com/images-medium-large-5/spectacular-view-to-the-mountains-and-blue-ski-tram-at-snowbird-ski-resort-in-utah-anton-oparin.jpg');
-}
+// .vail {
+//   background-image: url('http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx');
+// }
+// .jackson {
+//   background-image: url('http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg');
+// }
+// .heavenly {
+//   background-image: url('http://img4.onthesnow.com/image/la/40/4023.jpg');
+// }
+// .parkcity {
+//   background-image: url('http://www.equityresidences.com/wp-content/uploads/2013/12/IMG_0863_v21.jpg');
+// }
+// .snowbird {
+//   background-image: url('http://images.fineartamerica.com/images-medium-large-5/spectacular-view-to-the-mountains-and-blue-ski-tram-at-snowbird-ski-resort-in-utah-anton-oparin.jpg');
+// }
 .circle {
   width: 45px;
   height: 45px;
@@ -105,6 +111,7 @@ section {
   color: #127C01;
   position: absolute;
   left: 85px;
+  font-family: 'Amatic SC', cursive;
 }
 .user-mountains {
   background-color: lightblue;
