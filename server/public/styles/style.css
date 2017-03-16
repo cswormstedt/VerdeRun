@@ -52,6 +52,27 @@ section {
   background-attachment: fixed;
   background-position: center center;
 }
+#favMount {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+.vail {
+  background-image: url('http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx');
+}
+.jackson {
+  background-image: url('http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg');
+}
+.heavenly {
+  background-image: url('http://img4.onthesnow.com/image/la/40/4023.jpg');
+}
+.parkcity {
+  background-image: url('http://www.equityresidences.com/wp-content/uploads/2013/12/IMG_0863_v21.jpg');
+}
+.snowbird {
+  background-image: url('http://images.fineartamerica.com/images-medium-large-5/spectacular-view-to-the-mountains-and-blue-ski-tram-at-snowbird-ski-resort-in-utah-anton-oparin.jpg');
+}
 .circle {
   width: 45px;
   height: 45px;

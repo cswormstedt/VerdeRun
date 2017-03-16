@@ -17,9 +17,10 @@ router.get('/', function(req, res){
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
 		
-		console.log(user.favoriteMountain);
-		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain });
+		res.render('profile', {username: req.session.username, favoriteMountainArray: user.favoriteMountain});
 	})
+
+		// , current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon }
 
 	}
 	else {

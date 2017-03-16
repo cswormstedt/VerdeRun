@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var mountainSchema = new mongoose.Schema({
 	name: String,
 	state: String,
+	img: String,
 	trails: {
 		number: Number,
 		open: Number,

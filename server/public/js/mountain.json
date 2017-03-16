@@ -1,6 +1,7 @@
 [{
 	"name": "Vail",
 	"state": "Colorado",
+	"img": "http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx",
 	"trails": {
 		"number": 193,
 		"open": 193,
