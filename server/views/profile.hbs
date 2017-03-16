@@ -1,32 +1,39 @@
-<header class="header">
+<header class="user-header">
 		<div class="header-container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-sx-10">
 						<div class="circle"></div>
-						<h1 class="title">Green Run</h1>
+						<h1 class="title">{{username}}</h1>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
-					<h2 class="hello"> {{ username }} profile</h2>
-					{{#each favoriteMountainArray}}
-					
-					<div class="mountain"><p>{{this.conditions}}</p>
-						<div class="mountainName">
-							<div class="condition">
-								<div class="temp">
-									<div class="icon">
-										<img src=""/>
-									</div>
-								</div>
-							</div>
+					<nav>
+						<div class="user-nav">
+							<a href="/home">Settings</a>
+							<a href="/user/logout">LOGOUT</a>
+							
 						</div>
-					</div>
-					{{/each}}
-
-
+					</nav>
 				</div>
 			</div>
 		</div>
-</header>
-<a href="/home">Settings</a><br>
-<a href="/user/logout">LOGOUT</a>
+</header>	
+</section class="user-mountains">		
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
+					{{#each favoriteMountainArray}}
+					
+						<div class="mountainName">
+						<p class="favMount">{{this.name}} 21<span>&deg;F</span><img class="weather-icon" src="../images/png/006-sun.png"/></p>
+						
+										{{!-- <canvas id="icon1" width="128" height="128"></canvas> --}}
+									
+						</div>
+					{{/each}}
+				</div>
+			</div>
+</section>
+
+			
+
+
 

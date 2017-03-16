@@ -1,13 +1,11 @@
 console.log('yo');
-//weather api ajax
-var response = {};
 
 
 $('.place').on('click', function(e){
 	var mountainName = $(e.target).parent().parent();
 	var id = mountainName.data('id');
 	console.log(id);
-
+	console.log(e + " this is the event");
 	var favId = {mountainId: id}
 	
 
@@ -16,7 +14,7 @@ $('.place').on('click', function(e){
 		type: 'POST',
 		data: favId,
 		success: function(res){
-			console.log(res);
+			console.log(favId);
 		},
 		error: function(err){
 			console.log(err);
@@ -40,17 +38,6 @@ $('.signUpExit').on('click', function(e){
 	$('.modalHide').removeClass('register-modal');
 	$('.signUpOne').show();
 });
-
-
-//////////////////
-////weather api///
-//////////////////
-
-$.ajax({
-	url: '',
-	type: 'GET',
-	dataType: 'json',
-})
 
 
 

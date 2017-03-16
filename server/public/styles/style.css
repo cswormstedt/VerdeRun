@@ -9,12 +9,24 @@
   display: block;
 }
 .header-container {
-  max-width: 1200px;
   margin: 0 auto;
 }
-.welcome {
-  color: #127c01;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.user-nav {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+}
+.welcome1 {
+  color: #ffffff;
+  font-size: 355%;
+  font-weight: 500;
+  text-shadow: 0 1px 5px #000000;
+}
+.welcome2 {
+  color: #ffffff;
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 0 1px 5px #000000;
 }
 .register {
   margin: 5px;
@@ -24,7 +36,7 @@ section {
   text-align: center;
 }
 .startimg {
-  background-image: url('https://summitcountyski.files.wordpress.com/2010/12/main-street-telluride.jpg');
+  background-image: url('http://christysports.com/theridgereport/wp-content/uploads/2016/03/Super-Brews-1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -52,6 +64,20 @@ section {
   color: #127C01;
   position: absolute;
   left: 85px;
+}
+.user-mountains {
+  background-color: lightblue;
+}
+.user-header {
+  border-bottom: 1px solid black;
+  height: 80px;
+}
+.favMount {
+  font-size: 200%;
+  font-weight: bold;
+}
+.weather-icon {
+  margin-left: 25px;
 }
 .modalHide {
   opacity: 0;
