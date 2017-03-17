@@ -54,6 +54,11 @@ response.on('end', function(){
             }
       }
       else {
+        favoriteMountainWeather.push(favoriteMountain);
+             if (favoriteMountainWeather.length === mountainsLength && favoriteMountainWeather.length >= 1){
+               fn(favoriteMountainWeather);
+            }
+        // fn(favoriteMountainWeather);
         printError({message:  "There was an error getting the weather, there was a status code of " + http.STATUS_CODES[response.statusCode]})
       }
   });

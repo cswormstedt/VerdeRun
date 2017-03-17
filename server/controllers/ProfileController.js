@@ -18,7 +18,7 @@ router.get('/', function(req, res){
 					console.log(user.favoriteMountain.length, ' this is length')
 				
 				if (user.favoriteMountain.length === 0){
-					console.log(' this is hitting')
+					// console.log(' this is hitting')
 					emptyMountain = true; 
 					res.render('profile', {username: req.session.username, emptyMountain: emptyMountain});
 				}
@@ -26,12 +26,10 @@ router.get('/', function(req, res){
 					console.log('this is hitting')
 					emptyMountain = false; 
 					weather.get(user.favoriteMountain, function(favoriteMountainArray){
-			
-				
-		
-				res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray, emptyMountain: emptyMountain});
-				// res.send(apiWeather);
-			});
+						console.log(favoriteMountainArray, ' this fav mount')
+						res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray, emptyMountain: emptyMountain});
+						// res.send(apiWeather);
+					});
 
 				}
 
