@@ -2,6 +2,8 @@
 	"name": "Vail",
 	"state": "Colorado",
 	"img": "http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx",
+	"latitude": "39.637642",
+	"longitude": "-106.363204",
 	"trails": {
 		"number": 193,
 		"open": 193,
@@ -45,6 +47,8 @@
 	"name": "Jackson Hole",
 	"state": "Wyoming",
 	"img" : "http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg",
+	"latitude":"43.4799",
+	"longitude": "-110.7624",
 	"trails": {
 		"number": 130,
 		"open": 126,
