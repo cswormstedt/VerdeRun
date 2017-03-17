@@ -21,14 +21,12 @@ router.get('/', function(req, res){
 				// res.send(apiWeather);
 			});
 
-	});
+		});
 
 	}
 
 		// , current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon }
-
-
-	} else {
+	else {
 		res.redirect('/user/start');
 	}
 });
