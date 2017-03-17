@@ -15,8 +15,9 @@
 </header>
 
 <section class="user-mountains">
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {{#each favoriteMountainArray}}    
+
  
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading" data-id="{{ this.id }}">
@@ -56,9 +57,44 @@
                   {{/each}}
                   </a> <button class ="remove" data-id= "{{this.id}}"> - </button>
           </div>
+
+    <div id='container'>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading" data-id="{{ this.id }}">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{@index}}" aria-expanded="false" aria-controls="">
+              	
+      			<p class="favMount" id="favMount" style="background-image:url({{this.img}});">{{this.name}}<span> {{this.weather.temp}}&deg;F {{this.weather.current}}</span>
+      			<img class="weather-icon" src="../images/SVG/Shades.svg"/></p>
+
+            </a>
+          </h4>
+        </div>
+        <div id="collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+            <div class="panel-body">
+                <p> Trails: {{this.trails.number}}</p>
+                <p> Open Trails: {{this.trails.open}}</p>
+                <p>Closed Trails:{{this.trails.closed}}</p>
+                <p>Conditions {{this.conditions}}</p>
+                <p id="bars"> Bars </p>
+                <p>{{#each this.nightlife.bars}}</p>
+                    {{this.name}}<br>
+                    {{this.type}}<br>
+                    {{this.address}}<br>
+                    {{/each}}<br>
+                    <p id="restaurants"> Restaurants </p>
+                <p>{{#each this.nightlife.restaurants}}</p>
+                    {{this.name}}<br>
+                    {{this.type}}<br>
+                    {{this.address}}<br>
+                    {{/each}}
+                    </a> <button class="remove" data-id="{{this.id}}"> - </button>
+            </div>
+        </div>
+
       </div>
-    {{/each}}
-  </div>
+      {{/each}}
+    </div>
 </section>
 
 			
