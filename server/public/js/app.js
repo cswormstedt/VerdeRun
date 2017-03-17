@@ -34,14 +34,13 @@ $('.remove').on('click', function(e){
 	var button = $(e.target);
 	var id = button.data('id');
 	var favId = {mountainId: id};
-	var container = $('.remove').parent().parent().parent().parent()
+	var container = $(this).parent().parent().parent().empty()
 	
 	$.ajax({
 		url: '/profile/' + id,
 		type: 'DELETE',
 		success: function(){
 			console.log();
-			location.reload();
 			container.empty()
 			
 			// $('.user-mountains').removeClass();
