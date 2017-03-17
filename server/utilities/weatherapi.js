@@ -43,13 +43,14 @@ response.on('end', function(){
             favoriteMountain.weather = {current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon};
               //dont call this line until the loop hits the end of favorite
               favoriteMountainWeather.push(favoriteMountain);
+
    
               console.log(favoriteMountainWeather.length, ' final array length')
               if (favoriteMountainWeather.length === mountainsLength && favoriteMountainWeather.length >= 1){
                fn(favoriteMountainWeather);
             }
             else {
-              // favoriteMountainWeather.pop()
+            
             }
       }
       else {
