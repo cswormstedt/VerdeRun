@@ -14,12 +14,28 @@ router.get('/', function(req, res){
 		var userId = req.session.userId;
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
+				var emptyMountain
+					console.log(user.favoriteMountain.length, ' this is length')
+				
+				if (user.favoriteMountain.length === 0){
+					console.log(' this is hitting')
+					emptyMountain = true; 
+					res.render('profile', {username: req.session.username, emptyMountain: emptyMountain});
+				}
+				else{
+					console.log('this is hitting')
+					emptyMountain = false; 
+					weather.get(user.favoriteMountain, function(favoriteMountainArray){
 			
-
-			weather.get(user.favoriteMountain, function(favoriteMountainArray){
-				res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray});
+				
+		
+				res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray, emptyMountain: emptyMountain});
 				// res.send(apiWeather);
 			});
+
+				}
+
+		
 
 		});
 
@@ -42,11 +58,11 @@ router.post('/', function(req,res){
 	console.log(req.body, ' this is post route for id');
 	var userId = req.session.userId
 	User.findById(userId, function(err, users){
-		console.log(userId);
-		console.log(users.favoriteMountain, ' this is user mountain')
+		// console.log(userId);
+		// console.log(users.favoriteMountain, ' this is user mountain')
 	
 		users.favoriteMountain.push(mountain);
-
+		// console.log(users.favoriteMountain.length, ' this is fav mountain length')
 		users.save();
 		res.render('profile', {favoriteMountain: []});
 	});
@@ -58,6 +74,8 @@ router.delete('/:id', function(req, res){
 	var userId = req.session.userId;
 	User.findById(userId, function(err, user){
 	user.favoriteMountain.pull(id);
+	// console.log(user.favoriteMountain.length)
+	// console.log(user, ' this is user in delete')
 	user.save();
 	console.log(user);
 	res.send('success');
