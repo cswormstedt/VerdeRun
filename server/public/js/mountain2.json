@@ -2,6 +2,8 @@
 		"name": "Park City",
 		"state": "Utah",
 		"img" : "http://www.equityresidences.com/wp-content/uploads/2013/12/IMG_0863_v21.jpg",
+		"latitude":"40.6461",
+		"longitude": "-111.4980",
 		"trails": {
 			"number": 300,
 			"open": 293,
@@ -45,6 +47,8 @@
 		"name": "Snowbird",
 		"state": "Utah",
 		"img": "http://images.fineartamerica.com/images-medium-large-5/spectacular-view-to-the-mountains-and-blue-ski-tram-at-snowbird-ski-resort-in-utah-anton-oparin.jpg",
+		"latitude":"40.5818",
+		"longitude": "-111.6552",
 		"trails": {
 			"number": 169,
 			"open": 144,

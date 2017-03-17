@@ -40,7 +40,7 @@ function runReq(favoriteMountain, mountainsLength,fn){
         console.log("The weather is currently " + weather.currently.summary + " with a temperature of " + weather.currently.temperature + " with windspeeds at " + weather.currently.windSpeed + "mph ");
         favoriteMountain.weather = {current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon};
         //dont call this line until the loop hits the end of favorite
-        fn([favoriteMountain]);
+        fn(favoriteMountain);
       }
       else {
         printError({message:  "There was an error getting the weather for chicago, there was a status code of " + http.STATUS_CODES[response.statusCode]})
