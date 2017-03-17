@@ -1,3 +1,12 @@
+body{
+  background-image: url('http://www.inclineski.com/images/slideshow/Bells_sm.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center,
+}
+
+
 .login {
   position: absolute;
   right: 30px;
@@ -35,6 +44,15 @@ section {
   width: 100%;
   text-align: center;
 }
+
+a{
+  color: #127C01;
+  font-size: 25px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  margin-right: 74px;
+}
+
 #bars {
   font-weight: bold;
   font-size: 25px;
@@ -50,6 +68,7 @@ section {
   font-family: 'Amatic SC', cursive;
   color: #127C01;
   font-size: 40px;
+  font-weight: bold;
 }
 .startimg {
   background-image: url('http://christysports.com/theridgereport/wp-content/uploads/2016/03/Super-Brews-1.jpg');
