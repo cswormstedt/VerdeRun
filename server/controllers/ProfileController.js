@@ -38,19 +38,22 @@ router.post('/', function(req,res){
 	User.findById(userId, function(err, users){
 		console.log(userId);
 		console.log(users.favoriteMountain, ' this is user mountain')
-	
+		console.log(' this is the mountain we are pushing ', mountain)
 		users.favoriteMountain.push(mountain);
 
 		users.save();
 		res.render('profile', {favoriteMountain: []});
+		
 	});
 });
 
 
 router.delete('/:id', function(req, res){
 	var id = req.params.id;
+	console.log(id + " this is the id");
 	var userId = req.session.userId;
 	User.findById(userId, function(err, user){
+		console.log(userId + " this is USERID");
 	user.favoriteMountain.pull(id);
 	user.save();
 	console.log(user);
