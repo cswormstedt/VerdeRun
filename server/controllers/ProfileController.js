@@ -7,6 +7,7 @@ var weather  = require('../utilities/weatherapi.js');
 
 
 router.get('/', function(req, res){
+
 	
 	if(req.session.isLoggedIn){
 
@@ -14,11 +15,18 @@ router.get('/', function(req, res){
 		console.log(req.session.userId)
 		User.findById(userId).populate('favoriteMountain').exec(function(err, user){
 			
+
 			weather.get(user.favoriteMountain, function(favoriteMountainArray){
 				res.render('profile', {username: req.session.username, favoriteMountainArray: favoriteMountainArray});
 				// res.send(apiWeather);
 			});
+
 	});
+
+	}
+
+		// , current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon }
+
 
 	} else {
 		res.redirect('/user/start');
