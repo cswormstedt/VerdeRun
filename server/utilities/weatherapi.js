@@ -18,9 +18,10 @@ function getWeather(favoriteMountain, fn){
 }
 
 
-function runReq(favoriteMountain, mountainsLength,fn){
+function runReq(favoriteMountain, mountainsLength, fn){
 
   // var weatherArray = [];
+  console.log(mountainsLength);
   var latitude = favoriteMountain.latitude;
   var longitude = favoriteMountain.longitude;
   var request =  https.get('https://api.darksky.net/forecast/8df1e8974b0d890b106b95d0a8943732/' + latitude + ',' + longitude, function(response){
@@ -43,7 +44,7 @@ function runReq(favoriteMountain, mountainsLength,fn){
         fn([favoriteMountain]);
       }
       else {
-        printError({message:  "There was an error getting the weather for chicago, there was a status code of " + http.STATUS_CODES[response.statusCode]})
+        // printError({message:  "There was an error getting the weather, there was a status code of " + http.STATUS_CODES[response.statusCode]})
       }
   })
 })
