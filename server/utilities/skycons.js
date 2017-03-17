@@ -2,8 +2,9 @@ var User 	 = require('../models/User');
 var mongoose = require('mongoose');
 var weather  = require('../utilities/weatherapi.js');
 
-
-var skyconType = function(favoriteMountainArray) {
+weather.get(function(favoriteMountainArray){
+	console.log(this.icon);
+var skyconType = function(skyCons) {
   if(this.icon === 'rain'){
     $('.weather-icon').attr('src', '../images/SVG/Cloud-Rain.svg');
   }else if(this.icon === 'snow'){
@@ -29,6 +30,7 @@ var skyconType = function(favoriteMountainArray) {
   }else {
   	$('.weather-icon').attr('src', '../images/SVG/Shades.svg');
  };
+}
 
 
  module.exports = skyconType;
