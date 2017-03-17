@@ -8,7 +8,6 @@ $('.place').on('click', function(e){
 	console.log(e + " this is the event");
 	var favId = {mountainId: id}
 	
-
 	$.ajax({
 		url: '/profile',
 		type: 'POST',
@@ -51,8 +50,6 @@ $('.remove').on('click', function(e){
 			console.log(err)
 		}
 	});
-
-
 });
 
 
@@ -65,7 +62,6 @@ $('.signUpOne').on('click',function(e){
 	$('.modalHide').toggleClass('register-modal');
 	$('.signUpOne').hide();
 });
-
 
 $('.signUpExit').on('click', function(e){
 	console.log('click');

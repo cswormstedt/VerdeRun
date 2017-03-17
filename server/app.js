@@ -1,11 +1,11 @@
-var express = require('express');
-var app 	= express();
-var server  = require('http').createServer(app);
-var path 	= require('path');
-var session = require('express-session');
+var express    = require('express');
+var app 	   = express();
+var server     = require('http').createServer(app);
+var path 	   = require('path');
+var session    = require('express-session');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var https = require('https');
+var mongoose   = require('mongoose');
+var https      = require('https');
 
 
 require('./db/db');
@@ -41,5 +41,5 @@ app.use('/profile', profileController);
 
 
 server.listen(3000, function(){
-	console.log("listening on port 3000");
+	console.log("yo it's Andre port 3000");
 })

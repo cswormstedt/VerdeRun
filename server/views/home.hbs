@@ -1,58 +1,60 @@
-<header class="header">
-		<div class="header-container">
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-sx-10">
-						<div class="circle"></div>
-						<h1 class="title">Mountains</h1>
-				</div>
-                               
-				<div class="col-lg-8 col-md-8 col-sm-8 col-sx-6">
+<body class="homeimg">
+    
+    <header class="header">
+        <div class="circle"></div>
+        <h1 class="title">Mountains</h1>
+                    
+        <nav>
 
-					<h3 class="hi">{{username}} pick your favs </h3>
+            <a href="#" id="menu-icon"></a>
 
-					<a href="/profile">{{username}} page</a>
-                    <a href="/user/logout">Sign out</a>
-					<div class="userCircle"></div>
+            <ul>
+                <li><a href="/profile">{{username}} page</a></l1>
+                <li><a href="/user/logout">Sign out</a></li>
+            </ul>
 
-				</div>
-			</div>
-		</div>
-</header>
+        </nav>
+    </header>
 
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
- {{#each mountainsArray}}    
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading" data-id="{{ this.id }}">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{@index}}" aria-expanded="false" aria-controls="">
-          {{this.name}}, {{this.state}}
-        </a> <button class ="place"> + </button>
-      </h4>
-    </div>
-    <div id="collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-        <div class="panel-body">
-            <p> Trails: {{this.trails.number}}</p>
-            <p> Open Trails: {{this.trails.open}}</p>
-            <p>Closed Trails:{{this.trails.closed}}</p>
-            <p>Conditions {{this.conditions}}</p>
-            <p id="bars"> Bars </p>
-          <p>{{# each this.nightlife.bars}}</p>
-                {{this.name}}<br>
-                {{this.type}}<br>
-                {{this.address}}<br>
-                {{/each}}<br>
-                <p id="restaurants"> Restaurants </p>
-            <p>{{# each this.nightlife.restaurants}}</p>
-                {{this.name}}<br>
-                {{this.type}}<br>
-                {{this.address}}<br>
-                {{/each}}
-           
+    <section class="favPicks">
+        <div>
+            <h3 class="hi">{{username}} pick your favs </h3>
         </div>
-    </div>
-    {{/each}}
-  </div>
+    </section>
 
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+     {{#each mountainsArray}}    
+          <div class="panel panel-default">
+            <div class="panel-heading1" role="tab" id="heading" data-id="{{ this.id }}">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{@index}}" aria-expanded="false" aria-controls="">
+                  {{this.name}}, {{this.state}}
+                </a> <button class ="place"> + </button>
+              </h4>
+            </div>
+            <div id="collapse{{@index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                <div class="panel-body">
+                    <p> Trails: {{this.trails.number}}</p>
+                    <p> Open Trails: {{this.trails.open}}</p>
+                    <p>Closed Trails:{{this.trails.closed}}</p>
+                    <p>Conditions {{this.conditions}}</p>
+                    <p id="bars"> Bars </p>
+                    <p>{{# each this.nightlife.bars}}</p>
+                        {{this.name}}<br>
+                        {{this.type}}<br>
+                        {{this.address}}<br>
+                        {{/each}}<br>
+                        <p id="restaurants"> Restaurants </p>
+                    <p>{{# each this.nightlife.restaurants}}</p>
+                        {{this.name}}<br>
+                        {{this.type}}<br>
+                        {{this.address}}<br>
+                        {{/each}}
+                </div>
+            </div>
+            {{/each}}
+          </div>
+</body>
 
 
 

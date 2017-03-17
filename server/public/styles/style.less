@@ -1,29 +1,158 @@
 @red: #BF0009;
 @green: #127c01;
 
+body { 
+    
+    background: #f9f9f9;
+    color: #555;
+}
+.git{ 
+    text-decoration: none;
+    color: @green;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal
+}
 
-.login {
-	position: absolute;
-    right: 30px;
-    top: 25px;
+a {
+    color: #127c01;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #444;
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #127c01;
+    z-index: 100;
+}
+
+nav {
+    float: right;
+    padding: 20px;    
+}
+
+#menu-icon {
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    background: #127c01 url(../images/SVG/menu-icon.svg) center;
+}
+
+a:hover#menu-icon {
+    background-color: #444;
+    border-radius: 4px 4px 0 0;
+}
+
+ul {
+
+    list-style: none;
+}
+
+.loginLi{
+    font-size: inherit;
+    padding: inherit;
+}
+
+li {
+    // display: inline-block;
+    font-size: 25px;
+    float: left;
+    padding: 10px
+}
+
+section {
+    margin: 80px auto 40px;
+    max-width: 980px;
+    position: relative;
+    padding: 20px
+}
+
+h1 {
+    font-size: 2em;
+    color: #127c01;
+    line-height: 1.15em;
+    margin: 20px 0 ;
+}
+
+p {
+    line-height: 1.45em;
+    // margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 640px) {
+    header {
+        position: absolute;
+    }
+    #menu-icon {
+        display: inline-block;
+    }
+    nav {
+        ul {
+            display: none;
+            position: absolute;
+            padding: 20px;
+            background: #fff;
+            border: 5px solid #444;
+            right: 20px;
+            top: 60px;
+            width: 50%;
+            border-radius: 4px 0 4px 4px;
+        }
+        &:active {
+            ul {
+                display: none;
+                position: absolute;
+                padding: 20px;
+                background: #fff;
+                border: 5px solid #444;
+                right: 20px;
+                top: 60px;
+                width: 50%;
+                border-radius: 4px 0 4px 4px;
+            }
+        }
+        li {
+            // text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0;
+        }
+        &:hover {
+            ul {
+                display: block;
+            }
+        }
+    }
 }
 
 .header {
-	height: 80px;
+    height: 80px;
     background: white;
     display: block;
 
 }
 
-.header-container {
-    // max-width: 1200px;
-    margin: 0 auto;
-}
-
-.user-nav {
-    position: absolute;
-    right: 30px;
-    top: 25px;
+footer {
+    color: snow;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(50, 50, 50, 0.6);
+    text-align: center;
+    margin-bottom: -10px;
 }
 
 .welcome1{
@@ -32,6 +161,7 @@
     font-weight: 500;
     text-shadow: 0 1px 5px rgba(0,0,0,1.0)
 }
+
 .welcome2 {
     color: rgb(255, 255, 255);
     font-size: 200%;
@@ -39,14 +169,17 @@
     text-shadow: 0 1px 5px rgba(0,0,0,1.0)
 }
 
-
 .register {
-	margin: 5px;
+    margin: 5px;
 }
 
 section {
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
+}
+
+.favPicks {
+    margin-top: 50px
 }
 
 #bars{
@@ -67,21 +200,29 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
-    
+    background-position: center center;   
 }
 
+.homeimg {
+    background-image: url('http://www.jamesrwilson.com/ski/art/alta_snowbird_mount_timpanogos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center,
+}
+
+// http://www.inclineski.com/images/slideshow/Bells_sm.jpg
 .panel-heading{
     color: rgb(255, 255, 255);
     text-shadow: 0 1px 5px rgba(0,0,0,1.0);
 
 }
+
 .favMount {
     font-size: 200%;
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-shadow: 0 1px 5px rgba(0,0,0,1.0);
-
 }
 
 #favMount {
@@ -91,29 +232,17 @@ section {
     background-position: center center;
 }
 
-.vail {
-    background-image: url('http://www.vail.com/~/media/hero%20images/vail%20960x330/fy17/2016_trails.ashx');
-
+.hi{
+    font-family: 'Amatic SC', cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 5px rgba(0,0,0,1.0);
+    font-size: 40px;
+    font-weight: bold;
 }
 
-.jackson{
-    background-image: url('http://lizaamericashost.com/wp-content/uploads/2014/03/Winter-Tetons1.jpg')
-}
-
-.heavenly {
-    background-image: url('http://img4.onthesnow.com/image/la/40/4023.jpg')
-}
-
-.parkcity {
-    background-image: url('http://www.equityresidences.com/wp-content/uploads/2013/12/IMG_0863_v21.jpg')
-}
-
-.snowbird {
-    background-image: url('http://images.fineartamerica.com/images-medium-large-5/spectacular-view-to-the-mountains-and-blue-ski-tram-at-snowbird-ski-resort-in-utah-anton-oparin.jpg')
-}
 
 .circle {
-	width: 45px;
+    width: 45px;
     height: 45px;
     border-radius: 50%;
     background: #127C01;
@@ -122,34 +251,12 @@ section {
     left: 30px;
 }
 
-// ul {
-//     display: inline;
-
-// }
-
-// li {
-//     list-style-type: none;
-//     display: inline;
-// }
-
-.userCircle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 1px solid black;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-}
-
 .title {
-	color: #127C01;
-	position: absolute;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    color: #127C01;
+    position: absolute;
     left: 85px;
-}
-
-.user-mountains{
-    background-color: lightblue;
 }
 
 .user-header {
@@ -157,43 +264,37 @@ section {
     height: 80px;
 }
 
-
 .weather-icon {
-    margin-left: 25px;
-    
+    width:25%;
+    height:25%
 }
 
 /////////////////
 //////modal//////
 /////////////////
 .modalHide {
-	opacity: 0;
+    opacity: 0;
     .register-modal{
         opacity: 0;
     }
 }
 
 .register-modal {
-	position: fixed;
-	background-color: white;
-	color: black;
-	top: 206px;
-	width: 100%;
-	padding: 1%;
-	animation: modal-animate 2s;
-	opacity: 1;
-	z-index: 100;
-	box-shadow: 1px 2px 3px 100rem rgba(100,100,100, 0.7);
-
+    background-color: white;
+    color: black;
+    top: 206px;
+    width: 100%;
+    padding: 1%;
+    animation: modal-animate 2s;
+    opacity: 1;
+    z-index: 100;
+    box-shadow: 1px 2px 3px 100rem rgba(100,100,100, 0.7);
 }
-
 /////////////////
 //////button/////
 /////////////////
 .signUpExit {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    float: right;
     color: black;
     background: transparent;
     border: none;
@@ -206,6 +307,7 @@ button {
     text-align: center;
     vertical-align: middle;
     padding: 3px 6px;
+    padding-top: 0px;
     border: 1px solid #147f00;
     border-radius: 3px;
     background: #127a00;
@@ -217,6 +319,7 @@ button {
     color: #ffffff;
     text-decoration: none;
 }
+
 button:hover,
 button:focus {
     border: 1px solid ##179500;
@@ -227,19 +330,10 @@ button:focus {
     color: #ffffff;
     text-decoration: none;
 }
+
 button:active {
     background: #0b4900;
     background: -webkit-gradient(linear, left top, left bottom, from(#0b4900), to(#147f00));
     background: -moz-linear-gradient(top, #0b4900, #147f00);
     background: linear-gradient(to bottom, #0b4900, #147f00);
 }
-
-
-
-/////////////////
-////accordion////
-/////////////////
-
-
-
-

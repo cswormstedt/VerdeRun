@@ -7,4 +7,4 @@ var UserSChema = new mongoose.Schema({
 	favoriteMountain: [{type: mongoose.Schema.Types.ObjectId, ref: 'Mountain'}]
 });
 
-module.exports = mongoose.model('User', UserSChema)
+module.exports = mongoose.model('User', UserSChema);
