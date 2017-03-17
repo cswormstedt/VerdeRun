@@ -1,15 +1,10 @@
 <body class="startimg">
-
 	<header class="header">
-
 		<div class="circle"></div>
 		<h1 class="title">Green Run</h1>
 					
-
 		<nav>
-
 			<a href="#" id="menu-icon"></a>
-
 			<ul>
 				<li class="loginLi"><form class="login" action="/user/start" method="POST">
 						<input type="text" value="" name="username" placeholder="Username"/>
@@ -17,15 +12,11 @@
 						<button type="submit"> Log in</button>
 					</form></l1>
 				{{ message }}
-
 			</ul>
-
 		</nav>
-
 	</header>
-		
+	
 	<section class="register-form">
-		
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-sx-6 ">
 				<h2 class="welcome1">Welcome to Green Run</h2>
@@ -35,9 +26,12 @@
 				</div>
 				<div class="modalHide"><button class="signUpExit">X</button>
 					<form action="/user/register" method="POST"><br>
-					<span style="color: red">{{ loginmessage }}</span><br>
-						<input class="register" type="email" value="" name="email" placeholder="Email"/><br>
-						<input class="register" type="text" value="" name="username" placeholder="Username"/><br>
+						<span style="color: red">{{ loginmessage }}</span>
+						<br>
+						<input class="register" type="email" value="" name="email" placeholder="Email"/>
+						<br>
+						<input class="register" type="text" value="" name="username" placeholder="Username"/>
+						<br>
 						<input class="register" type="password" value="" name="password" placeholder="Password"/><br>
 						<button class="register" type="submit"> Submit</button>
 					</form>
@@ -45,7 +39,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</section>
 </body>
 

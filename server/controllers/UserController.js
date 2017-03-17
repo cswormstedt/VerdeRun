@@ -5,13 +5,10 @@ var bcrypt  = require('bcryptjs');
 
 
 router.get('/start', function(req, res){
-	// console.log("user get");
 	res.render('start', {});
 });
 
 router.post('/start', function(req, res){
-	// console.log(req.body);
-	
 	//first query the database and find the user
 	User.findOne({username: req.body.username}, function(err, user){
 		//if there is a user then unhash their password
@@ -31,18 +28,14 @@ router.post('/start', function(req, res){
 					//send them a message wrong username or password
 					res.render('start', {message: 'username or password incorrect'})
 				}
-			})
+			});
 		}
 		//this is for the orignal if
 		else {
 			res.render('start', {message: 'username or password was incorrect'})
 		}
-	})
-})
-//for /register to work need /user/register in url
-// router.get('/register', function(req, res){
-// 	res.render('register', {});
-// });
+	});
+});
 
 router.post('/register', function(req, res){
 	//checking the database to see if there is already a username,
@@ -74,23 +67,24 @@ router.post('/register', function(req, res){
 						else{
 							res.send('there was an error');
 						}
-					})
-				})
-			})
+					});
+				});
+			});
 		}
 		else{
 			//send message that username is taken
 			res.render('start', {loginmessage: 'username is taken'})
 		}
-	})
+	});
 });
 
 
 router.get('/logout', function(req, res){
 	req.session.destroy(function(err){
 		res.redirect('/user/start')
-	})
-})
+	});
+});
 
 
 module.exports = router;
+
