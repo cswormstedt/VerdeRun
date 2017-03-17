@@ -37,6 +37,7 @@ response.on('end', function(){
           console.log("The weather is currently " + weather.currently.summary + " with a temperature of " + weather.currently.temperature + " with windspeeds at " + weather.currently.windSpeed + "mph ");
             favoriteMountain.weather = {current: weather.currently.summary, temp: weather.currently.temperature, icon: weather.currently.icon};
               //dont call this line until the loop hits the end of favorite
+              
               fn([favoriteMountain]);
       }
       else {
