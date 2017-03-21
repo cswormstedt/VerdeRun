@@ -68,7 +68,7 @@ h1 {
 p {
   line-height: 1.45em;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 640px) {
   header {
     position: absolute;
   }
@@ -104,6 +104,11 @@ p {
   }
   nav:hover ul {
     display: block;
+  }
+}
+@media only screen and (max-width: 640px) {
+  input {
+    width: 100%;
   }
 }
 .header {
