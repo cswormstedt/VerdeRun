@@ -75,6 +75,9 @@ p {
   #menu-icon {
     display: inline-block;
   }
+  input {
+    width: 100%;
+  }
   nav ul {
     display: none;
     position: absolute;
