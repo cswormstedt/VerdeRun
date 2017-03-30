@@ -20,5 +20,3 @@ creating a for loop to loop through user mountains and display the proper weathe
 ### unsolved problems
 The giant if else statement for cycling throw images for current weather
 
-
-![ALT TEXT]('./wireframe/wireframe.png')
